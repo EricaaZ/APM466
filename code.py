@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 class bond:
-    def __init__(self, ISIN, close_prices, maturity_date, coupon_rate, period):
-        self.ISIN = ISIN
+    def __init__(self, close_prices, maturity_date, coupon_rate, period):
         self.price = close_prices
         self.maturity = maturity_date
         self.coupon = coupon_rate
@@ -15,42 +14,42 @@ bond_list = []
 
 # close prices for ten days of each bond
 close_price_202031 = [99.85, 99.86, 99.86, 99.86, 99.86, 99.86, 99.86, 99.86, 99.86, 99.86]
-bond_1 = bond("CA135087D929", close_price_202031, datetime.date(2020,3,1), 0.75, 0)
+bond_1 = bond(close_price_202031, datetime.date(2020,3,1), 0.75, 0)
 bond_list.append(bond_1)
 
 close_price_202061 = [100.70, 100.70, 100.69, 100.69, 100.68, 100.66, 100.65, 100.65, 100.64, 100.64]
-bond_2 = bond("CA135087YZ11", close_price_202061, datetime.date(2020,6,1), 1.75, 0)
+bond_2 = bond(close_price_202061, datetime.date(2020,6,1), 1.75, 0)
 
 close_price_202091 = [99.26, 99.28, 99.28, 99.27, 99.28, 99.28, 99.28, 99.27, 99.28, 99.30]
-bond_3 = bond("CA135087E596", close_price_202091, datetime.date(2020,9,1), 0.375, 1)
+bond_3 = bond(close_price_202091, datetime.date(2020,9,1), 0.375, 1)
 bond_list.append(bond_3)
 
 close_price_202131 = [98.89, 98.93, 98.95, 98.94, 98.92, 98.92, 98.88, 98.90, 98.90, 98.93]
-bond_4 = bond("CA135087F254", close_price_202131, datetime.date(2021,3,1), 0.375, 2)
+bond_4 = bond(close_price_202131, datetime.date(2021,3,1), 0.375, 2)
 bond_list.append(bond_4)
 
 close_price_202191 = [98.41, 98.45, 98.49, 98.46, 98.46, 98.43, 98.43, 98.38, 98.41, 98.42]
-bond_5 = bond("CA135087F585", close_price_202191, datetime.date(2021,9,1), 0.375, 3)
+bond_5 = bond(close_price_202191, datetime.date(2021,9,1), 0.375, 3)
 bond_list.append(bond_5)
 
 close_price_202231 = [97.57, 97.63, 97.66, 97.65, 97.64, 97.60, 97.61, 97.57, 97.58, 97.61]
-bond_6 = bond("CA135087G328", close_price_202231, datetime.date(2022,3,1), 0.25, 4)
+bond_6 = bond(close_price_202231, datetime.date(2022,3,1), 0.25, 4)
 bond_list.append(bond_6)
 
 close_price_202331 = [100.31, 100.42, 100.48, 100.45, 100.44, 100.35, 100.31, 100.27, 100.31, 100.38]
-bond_7 = bond("CA135087H490", close_price_202331, datetime.date(2023,3,1), 0.875, 5)
+bond_7 = bond(close_price_202331, datetime.date(2023,3,1), 0.875, 5)
 bond_list.append(bond_7)
 
 close_price_202431 = [102.52, 102.65, 102.75, 102.58, 102.68, 102.53, 102.47, 102.46, 102.54, 102.64]
-bond_8 = bond("CA135087J546", close_price_202431, datetime.date(2024,3,1), 1.125, 6)
+bond_8 = bond(close_price_202431, datetime.date(2024,3,1), 1.125, 6)
 bond_list.append(bond_8)
 
 close_price_202491 = [98.72, 98.95, 99.29, 99.11, 99.25, 98.99, 99.03, 99.06, 98.99, 99.10]
-bond_9 = bond("CA135087J967", close_price_202491, datetime.date(2024,9,1), 0.75, 7)
+bond_9 = bond(close_price_202491, datetime.date(2024,9,1), 0.75, 7)
 bond_list.append(bond_9)
 
 close_price_202531 = [98.24, 98.43, 98.58, 98.48, 98.48, 98.30, 98.25, 98.24, 98.34, 98.47]
-bond_10 = bond("CA135087K528", close_price_202531, datetime.date(2025,3,1), 0.625, 8)
+bond_10 = bond(close_price_202531, datetime.date(2025,3,1), 0.625, 8)
 bond_list.append(bond_10)
 
 price_date = {}
